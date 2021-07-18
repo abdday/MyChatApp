@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appController.AnmeldungController">
+   <children>
+      <Label text="Anmeldung">
+         <font>
+            <Font name="System Bold" size="43.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5096153846153846" endY="1.0" startX="0.5096153846153846" startY="0.5576923076923077">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.25999999046325684" green="0.08839999884366989" blue="0.08839999884366989" opacity="0.9576271176338196" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.14074074074074075">
+                     <color>
+                        <Color red="0.25999999046325684" green="0.08839999884366989" blue="0.08839999884366989" opacity="0.9576271176338196" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.71">
+                     <color>
+                        <Color red="0.25999999046325684" green="0.08839999884366989" blue="0.08839999884366989" opacity="0.9599999785423279" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.003921568859368563" blue="0.003921568859368563" opacity="0.9599999785423279" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <VBox.margin>
+            <Insets bottom="40.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="username_lb" maxWidth="-Infinity" prefWidth="400.0" promptText="username">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="name_lb" maxWidth="-Infinity" prefWidth="400.0" promptText="your name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="anmeldenBtn" defaultButton="true" mnemonicParsing="false" onAction="#anmeldenHandel" text="anmelden">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

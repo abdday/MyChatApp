@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="500.0" spacing="30.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appController.AddFriendWindowController">
+   <children>
+      <Label alignment="CENTER" text="Add new Friend" textFill="#430606">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <TextField fx:id="friendUsername" alignment="CENTER" maxWidth="300.0" promptText="Friend's username">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#addAndClose" text="Add">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+</VBox>

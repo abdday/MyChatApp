@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appController.BasicAppViewController">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane fx:id="outerCenter" BorderPane.alignment="CENTER">
+         <top>
+            <HBox fx:id="chatHeader" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="friendImage" fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.png" />
+                     </image></ImageView>
+                  <VBox>
+                     <children>
+                        <Label fx:id="firendName" text="Label">
+                           <font>
+                              <Font name="Arab" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="friendUsername" text="Label" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox fx:id="chatFooter" alignment="CENTER_LEFT" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="attachBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" />
+                  <TextField fx:id="messageField" prefHeight="40.0" prefWidth="600.0" promptText="type a message" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="sendBtn" defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendHandel" prefHeight="40.0" prefWidth="40.0" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <center>
+            <ScrollPane fx:id="chatCenterScroll" fitToHeight="true" fitToWidth="true" vvalue="1.0" BorderPane.alignment="CENTER">
+               <content>
+                  <VBox fx:id="chatCenter" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </center>
+   <left>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="20.0">
+               <children>
+                  <ImageView fx:id="userImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" top="2.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox>
+                     <children>
+                        <Label fx:id="myNameLabel" text="Name">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="myUserNameLabel" alignment="TOP_CENTER" text="Label" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="300.0" spacing="10.0">
+               <children>
+                  <Button fx:id="addFriendBtn" mnemonicParsing="false" onAction="#addFriend" prefWidth="130.0" text="Add Friend" />
+                  <Button fx:id="removeFriendBtn" mnemonicParsing="false" onAction="#removeFriend" prefWidth="130.0" text="remove Friend" />
+                  <Button fx:id="refreschFriendsBtn" mnemonicParsing="false" onAction="#refreshFreinds" prefWidth="40.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <ListView fx:id="friendsList" minHeight="-Infinity" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

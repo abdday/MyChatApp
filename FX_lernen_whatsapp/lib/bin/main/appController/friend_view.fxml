@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appController.FriendViewController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+         <children>
+            <StackPane>
+               <children>
+                  <ImageView fx:id="friend_img" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="234.0" prefWidth="276.0">
+               <children>
+                  <Label fx:id="name_lb" layoutX="7.0" layoutY="6.0" prefHeight="30.0" prefWidth="153.0" text="Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="data_lb" layoutX="164.0" layoutY="13.0" text="Data" />
+                  <Label fx:id="last_lb" layoutX="42.0" layoutY="44.0" prefHeight="30.0" prefWidth="167.0" />
+                  <Label fx:id="sender_lb" layoutX="14.0" layoutY="48.0" prefHeight="22.0" prefWidth="24.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
